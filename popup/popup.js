@@ -13,7 +13,7 @@ function load(){
     wordsIndex = 0;
     indexList.forEach(el => console.log(el.index));
     // localStorage.removeItem('indexList');
-    document.getElementById("debug").innerText = localStorage['indexList'];
+    // document.getElementById("debug").innerText = localStorage['indexList'];
 
     addContainers();
     addRemoveBehaviour();
@@ -36,8 +36,8 @@ function createContainer(index, text){
     <div style="flex-grow: 7;" class="text-container">
         <input id="clipboardText` + index + `" class="clipboard-text" type="text" placeholder="clipboard text" value="` + text + `">
     </div>
-    <button id="copyBtn` + index + `" style="flex-grow: 1;">copy</button>
-    <button id="removeBtn` + index + `" style="flex-grow: 1;" >remove ` + index + `</button>
+    <button id="copyBtn` + index + `" class="copy-button" style="flex-grow: 1;">copy</button>
+    <button id="removeBtn` + index + `" style="flex-grow: 1;" >remove</button>
     </div>`
     document.getElementById("containers-area").innerHTML += container;
 
@@ -69,9 +69,11 @@ function addRemoveBehaviour(){
                 // document.getElementById("debug").innerText = indexList
                 
                 save();
+                document.getElementById("containers-area").innerHTML = "";
+                load();
                 
                 
-                document.getElementById("debug").innerText = localStorage['indexList'];
+                // document.getElementById("debug").innerText = localStorage['indexList'];
             }
         }
         catch{}
@@ -101,7 +103,7 @@ function addEditBehaviour(){
             
             save();
             
-            document.getElementById("debug").innerText = localStorage['indexList'];
+            // document.getElementById("debug").innerText = localStorage['indexList'];
 
         }
 
@@ -141,6 +143,6 @@ document.getElementById("add").onclick = function () {
     
     
 
-    document.getElementById("debug").innerText = localStorage['indexList'];
+    // document.getElementById("debug").innerText = localStorage['indexList'];
                 
 };
