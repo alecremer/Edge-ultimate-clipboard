@@ -1,0 +1,102 @@
+body{
+
+    width: 600px;
+    background-color: rgb(54, 61, 70);
+
+}
+
+.container{
+    display: flex;
+    align-items: stretch;
+    /* background-color: #f1f1f1; */
+}
+
+.container > * {
+    margin: 1%;
+    line-height: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.container > button{
+
+    background-color: rgb(58, 83, 99);
+    color: white;
+    font-size: 1rem;
+
+}
+
+button{
+    border-radius: 1rem;
+    border-width: 0rem;
+    background-color: rgb(58, 83, 99);
+    color: white;
+    font-size: 1rem;
+}
+
+button:hover{
+    
+    background-color: rgb(67, 95, 112);
+    
+}
+
+button:active{
+    
+    background-color: rgb(95, 135, 160);
+    
+}
+
+
+.add-button-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid #4e6272;
+}
+
+.add-button{
+    padding: 1rem;
+    width: 30%;
+}
+
+.clipboard-text{
+    background-color: #4e6272;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding: 0.7rem;
+    border-radius: 1rem;
+    border-color: #4e6272;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.clipboard-text:focus{
+    
+    background-color: #6e90aa;
+}
+
+.clipboard-text:active{
+    
+    border: none;
+    border-color: #4e6272;
+}
+
+input[type=text]:focus {
+    border: none;
+}
+
+.text-container{
+    border-radius: 1rem;
+    border-width: 0;
+    padding-right: 2rem;
+    /* padding-left: 1rem; */
+}
+
+.containers-area{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+}
